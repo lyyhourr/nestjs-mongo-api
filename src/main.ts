@@ -26,9 +26,10 @@ async function bootstrap() {
 
   // setup swagger
   SwaggerModule.setup('/doc', app, document, {
-    // swaggerOptions: {
-    //   basePath: 'api/v1',
-    // },
+    swaggerOptions: {
+      // basePath: 'api/v1',
+      persistAuthorization: true,
+    },
   });
 
   // setup  validation
